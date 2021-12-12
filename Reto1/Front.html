@@ -13,14 +13,10 @@
 </head>
 
 <body>
-    <script>
-        function HiperRegistro() {
-        alert('funciona juas juas')
-        location.replace("Registro.html");
-    }
 
 
-    </script>
+
+
     <div style="text-align: center; gap: 1.6rem;">
     <h1 class ="titulo">
         Con la Sartén por el mango</h1>
@@ -31,7 +27,7 @@
 
     <form class = "caja">
 <div class="Nombre">
-    <label> Usuario <br> <input class="Nombre" type="String" placeholder="Nombre" >
+    <label> Usuario <br> <input class="Nombre" type="String" placeholder="Nombre" />
 </div>
 <br>
 <div class="Contraseña">
@@ -39,19 +35,27 @@
 </div>
 
 <br>
-<button class ="inicio" onclick="guardarInformacion()">Iniciar Sesión</button>
+<button class ="inicio" onclick="IniciarSesion()">Iniciar Sesión</button>
     </form>
 
 <br></br>
 
+<div class = "cajapregunta">
+    <script>
+        function HiperRegistro() {
+        // alert('funciona juas juas')
+        location.replace("Registro.html");
+    }
+    </script>
 
 <p class ="pregunta">
-    ¿No tienes una cuenta? Registrate aquí!
+    ¿No tienes una cuenta? ¡Registrate aquí!
 </p>
 
 <button class="registro" onclick="HiperRegistro()">Registrarse</button>
 
-<a><Registro class="html"></Registro></a>
+</div>
+
 
 
 </body>
