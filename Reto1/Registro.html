@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
+
+    <script src="funcionesFront.js"></script>
+
     <link rel="stylesheet" href="Decorado.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script> src="https://cdn.jsdeliv.net/jquery.validation/1.16.0/additional-methods.js"</script>
+
+
 <head>
     <title class= "meseta">
         Con la Sartén por el mango </title>
 </head>
 
 <body>
-    
-    <script>
-        function HiperSesion() {
-          alert('funciona juas juas')
-         location.replace("Front.html");
-        }
-      </script>
+
 
     <div style="text-align: center; gap: 1.6rem;">
         <div class="bcg"></div>
@@ -26,33 +28,50 @@
 <form class = "cajaregistro">
 
 <div class="nombreregistro">
-<label>Nombre <br><input type="text" name="" placeholder="Nombre">
+<label>Nombre <br>
+    <input type="text" id="name" name="name" placeholder="Nombre" minlength="5" required/>
 </div>
 <br>
 <div class = "correoregistro">
-    <label>Correo electrónico <br><input type="text" name="" placeholder="Correo electrónico">
+    <label>Correo electrónico <br>
+        <input type="text" id="email" name="email" placeholder="Correo electrónico" required />
 </div>
 <br>
 <div class="Contraregistro">
-    <label> Contraseña <br>  <input type="text" name="" placeholder="8 carácteres requeridos">
+    <label> Contraseña <br>
+        <input type="text" id="password" name="password" placeholder="8 carácteres requeridos" minlength="8" maxlength=30 required />
 </div>
 <br>
 <div class="Contraregistro1">
-<label>Confirma tu Contraseña <br>  <input type="text" name="" placeholder="Los campos deben coincidir">
+<label>Confirma tu Contraseña <br>
+    <input type="text" id="passwordv" name="passwordv" placeholder="Los campos deben coincidir" minlength="8" maxlength=30 required />
 </div>
 <br>
 </tr>
-<button class="registro" onclick="guardarInformacion()">Registrarse</button>
+
+<button class="registro" onclick="guardarAdministrador()">Registrarse</button>
 
 </form>
 
 
+<div class="cajainicio">
+    <script>
+        function HiperSesion() {
+        //   alert('funciona juas juas')
+         location.replace("Front.html");
+        }
+      </script>
+
+
 
 <p class = "inicio">
+
     ¿Ya tienes una cuenta? Inicia sesión</p>
 
-<button class= "inicio" onclick="HiperSesion()">Iniciar sesión</button>
 
+
+<button class= "inicio" onclick="HiperSesion()">Iniciar sesión</button>
+</div>
 
 
 </body>
