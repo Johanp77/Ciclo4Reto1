@@ -1,6 +1,7 @@
 console.log("hola mundo")
 
 
-function guardarInformacion(){
+function IniciarSesion(){
     
 }
+

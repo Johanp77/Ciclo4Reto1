@@ -1,8 +1,10 @@
-console.log(event)
+
+let form = document.getElementById("cajita")
+form.addEventListener("submit",(e)=>e.preventDefault())
 
 //validaciones por parte del servidor
 
-$(document).ready(function() {
+/* $(document).ready(function() {
     $("#Registro").validate({
         debug: false,
         rules: {
@@ -38,7 +40,7 @@ $(document).ready(function() {
                 maxLength: "El número de carácteres no puede pasar de 30",
                 minLength: "Se requiere de 8 carácteres como mínimo",
             },*/
-            repeatpassword: {
+ /*            repeatpassword: {
             equalTo: "Los campos deben coincidir",
             },
             errorElement: "div"
@@ -47,14 +49,23 @@ $(document).ready(function() {
 });
 
 
-
-
+ */
 
 
 function guardarAdministrador() {
     if ($('#name').val().trim() == "" || $('#email').val().trim() == "" || $('#password').val().trim() == "") {
         alert('Campos vacíos, por favor verifique');
-    } else {
+    return
+    }
+let passwor1  = document.getElementById("password").value;
+let password2 = document.getElementById("passwordv").value;
+console.log(password)
+if(passwor1 !== password2){
+alert("las contraseñas no coinciden")
+return
+
+
+    } //else {
         var datos = {
             name: $('#name').val(),
             email: $("#email").val(),
@@ -74,25 +85,26 @@ function guardarAdministrador() {
             },
             complete: function (xhr, status) {
                 alert('Usuario Guardado');
-                limpiarFormulario();
+                //limpiarFormulario();
             }
         });
     }
 
-}
+//}
 
+/* 
 var p1 = document.getElementById("password").value;
 var p2 = document.getElementById("passwordv").value;
 
 if (p1 != p2) {
     alert("Las passwords deben de coincidir");
-    return false;
-  } else {
-    alert("Todo esta correcto");
-    return true; 
-  }
+        return false;
+    } else {
+        ("Todo esta correcto");
+    return true;
+    }
 
-
+ */
 
 
 /* 
